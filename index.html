@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Songs</title>
+    <script type="text/javascript">
+        function playSong(song) {
+            var audio = new Audio(song);
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="playSong('song1.mp3')">Play Song 1</button>
+    <button onclick="playSong('song2.mp3')">Play Song 2</button>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                alert("Here's a pop-up for you!");
+            }, 3000);  // 3 seconds delay before pop-up
+        }
+    </script>
+</body>
+</html>
